@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./css/styles.css">
+  <script src="./js/bundle.js"></script>
+  <title>To Do App</title>
+</head>
+
+<body>
+  <h1>ToDo's</h1>
+  <div id="app">
+    <form v-on:submit.prevent="saveNewToDo">
+      <label for="new-item">Add new item here:</label>
+      <input type="text" id="new-item" v-model="newToDo"/>
+      <label for="high">High</label>
+      <input type="radio" id="high" value="high"/>
+      <label for="low">Low</label>
+      <input type="radio" id="low" value="low"/>
+      <input type="submit" value="Save Item" />
+    </form>
+
+    <li>
+      <span>{{ todos }}</span>
+    </li>
+
+  </div>
+</body>
+</html>
